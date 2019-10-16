@@ -6,7 +6,28 @@
         xmlns:local="clr-namespace:MovieList"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Impact"/>
+            <Setter Property="FontSize" Value="20"/>
+            
+           
+        </Style>
+        
+    
+    </Window.Resources>
+    
+    
     <Grid>
         
+        <StackPanel Margin="10,10,10,10" Orientation="Vertical">
+            <TextBlock Background="Orange" Foreground="Magenta">Title</TextBlock>
+            <TextBox  Name="TitleInput" Margin="0,0,0,15" Background="Orange" Foreground="Magenta"></TextBox>
+            <TextBlock Background="Orange" Foreground="Magenta">Release Year</TextBlock>
+            <TextBox Name="ReleaseYearInput" Margin="0,0,0,15" Background="Orange" Foreground="Magenta"></TextBox>
+            <Button Margin="0,0,0,10" HorizontalAlignment="Center" Click="Add_Button_Click" Background="Orange" Foreground="Magenta">Add</Button>
+            <Button HorizontalAlignment="Center" Click="Show_Button_Click" Background="Orange" Foreground="Magenta">Show All Movies</Button>
+        </StackPanel>
     </Grid>
 </Window>
