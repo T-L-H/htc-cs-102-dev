@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,14 @@ namespace MovieList
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Movie> Movies = new List<Movie>();
+        
+     ObservableCollection<Movie> Movies = new ObservableCollection<Movie>();
         public MainWindow()
         {
             InitializeComponent();
+            lvMovies.ItemsSource = Movies;
+            
+            
         }
 
         private void Show_Button_Click(object sender, RoutedEventArgs e)
@@ -34,13 +39,46 @@ namespace MovieList
             }
         }
 
-        private void Add_Button_Click(object sender, RoutedEventArgs e)
+        private void AddButton_Click(object sender, RoutedEventArgs e)
         {
+            foreach (Movie item in Movies)
+            {
+                if (item.Title == TitleInput.Text)
+                {
+                    MessageBox.Show("This title was already added.");
+                    return;
+                }
+            }
+            if ( String.IsNullOrEmpty( TitleInput.Text ))
+            {
+                MessageBox.Show("You did not add a title.");
+                return;
+            }
+            if (String.IsNullOrEmpty(ReleaseYearInput.Text))
+            {
+                MessageBox.Show("You did not add a release year.");
+                return;
+            }
             string title = TitleInput.Text;
-            int ReleaseYear = Convert.ToInt32(ReleaseYearInput.Text);
-            Movie movie = new Movie(title, ReleaseYear);
+            string director = directorInput.Text;
+            int releaseYear = Convert.ToInt32(ReleaseYearInput.Text);
+            int length = Convert.ToInt32(lengthInput.Text);
+            string genre = genreInput.Text;
+
+
+            Movie movie = new Movie(title, releaseYear, director, length, genre);
             Movies.Add(movie);
-            MessageBox.Show("Your Movie was added!");
+            MessageBox.Show("Movie was added");
+           
+        }
+
+        private void lvMovies_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Movie selectedMovie = lvMovies.SelectedItem as Movie;
+            if (selectedMovie != null)
+            {
+                selectedMovie.ShowDetails();
+            }
         }
     }
 }
