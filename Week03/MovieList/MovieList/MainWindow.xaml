@@ -25,7 +25,7 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Width="150" Header="Title" DisplayMemberBinding="{Binding Title}"></GridViewColumn>
-                        <GridViewColumn Width="150" Header="Release" DisplayMemberBinding="{Binding Release}"></GridViewColumn>
+                        <GridViewColumn Width="150" Header="Release" DisplayMemberBinding="{Binding ReleaseYear}"></GridViewColumn>
                         <GridViewColumn Width="150" Header="Director" DisplayMemberBinding="{Binding Director}"></GridViewColumn>
                         <GridViewColumn Width="150" Header="Length" DisplayMemberBinding="{Binding Length}"></GridViewColumn>
                         <GridViewColumn Width="150" Header="Genre" DisplayMemberBinding="{Binding Genre}"></GridViewColumn>
@@ -58,7 +58,7 @@
             </ComboBox>
 
 
-                <TextBlock Background="Aquamarine" Foreground="AliceBlue">Rotten Tomatoes Score</TextBlock>
+                <TextBlock Background="Orange" Foreground="Magenta">Rotten Tomatoes Score</TextBlock>
 
                 <TextBox Name="rottenInput" Margin="0,0,0,15" Background="Beige" Foreground="RoyalBlue">
 

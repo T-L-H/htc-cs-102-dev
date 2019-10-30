@@ -39,7 +39,7 @@ namespace MovieList
             }
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e, int releaseYear)
+        private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             foreach (Movie item in Movies)
             {
@@ -54,18 +54,18 @@ namespace MovieList
                 MessageBox.Show("You did not add a title.");
                 return;
             }
-            DateTime DateTime = DateTime.Now;
+            DateTime Nowdate = DateTime.Now;
 
             if (Date.SelectedDate != null)
 
             {
 
-                DateTime = Date.SelectedDate.Value;
+                Nowdate = Date.SelectedDate.Value;
                 
             }
             string title = TitleInput.Text;
             string director = directorInput.Text;
-            
+            string releaseDate = Date.SelectedDate.Value.ToShortDateString();
             int length = Convert.ToInt32(lengthInput.Text);
             string genre = genreInput.Text;
 
@@ -80,7 +80,7 @@ namespace MovieList
             }
 
 
-            Movie movie = new Movie(title, releaseYear, director, length, genre, rotten);
+            Movie movie = new Movie(title, releaseDate, director, length, genre, rotten);
             Movies.Add(movie);
             MessageBox.Show("Movie was added");
            

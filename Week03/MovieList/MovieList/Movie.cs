@@ -12,47 +12,47 @@ namespace MovieList
        
 
         public string Title { get; set; }
-        public int DateTime { get; set; }
+        public string ReleaseYear { get; set; }
         public string Director { get; set; }
         public int Length { get; set; }
         public string Genre { get; set; }
         public double Rotten { get; set; }
-        public Movie(string title, int releaseYear)
+        public Movie(string title, string v, string releaseYear)
         {
             Title = title;
-            DateTime = releaseYear;
+            ReleaseYear = releaseYear;
         }
 
-        public Movie(string title, int releaseYear, string director)
+        public Movie(string title, string v, string releaseYear, string director)
         {
             Title = title;
-            DateTime = releaseYear;
+            ReleaseYear = releaseYear;
             Director = director;
         }
 
-        public Movie(string title, int releaseYear, string director, int length)
+        public Movie(string title, string releaseYear, string director, int length)
         {
             Title = title;
-            DateTime = releaseYear;
+            ReleaseYear = releaseYear;
             Director = director;
             Length = length;
         }
 
-        public Movie(string title, int releaseYear, string director, int length, string genre)
+        public Movie(string title, string releaseYear, string director, int length, string genre)
         {
             Title = title;
-            DateTime = releaseYear;
+            ReleaseYear = releaseYear;
             Director = director;
             Length = length;
             Genre = genre;
         }
-        public Movie(string title, int releaseYear, string director, int length, string genre, double rotten)
+        public Movie(string title, string releaseYear, string director, int length, string genre, double rotten)
 
         {
 
             Title = title;
 
-            DateTime = releaseYear;
+           ReleaseYear = releaseYear;
 
             Director = director;
 
@@ -64,10 +64,19 @@ namespace MovieList
 
         }
 
-        public Movie(string title, int releaseYear, string director, int length, string genre, int rotten)
+        public Movie(string title, string releaseYear, string director, int length, string genre, int rotten)
         {
             Title = title;
-            DateTime = releaseYear;
+            ReleaseYear = releaseYear;
+            Director = director;
+            Length = length;
+            Genre = genre;
+            Rotten = rotten;
+        }
+
+        public Movie(string title, string director, int length, string genre, int rotten)
+        {
+            Title = title;
             Director = director;
             Length = length;
             Genre = genre;
@@ -78,7 +87,7 @@ namespace MovieList
 
         {
 
-            MessageBox.Show(Title + " was released in " + DateTime + "\n\r" + "Director is " + Director + "\n\r" + "Length is " + Length + "\n\r" + "Genre is " + Genre + "\n\r" + "Rotten Tomatoes Score is " + Rotten);
+            MessageBox.Show(Title + " was released in 10/10/19 " + "\n\r" + "Director is " + Director + "\n\r" + "Length is " + Length + "\n\r" + "Genre is " + Genre + "\n\r" + "Rotten Tomatoes Score is " + Rotten);
 
         }
 
