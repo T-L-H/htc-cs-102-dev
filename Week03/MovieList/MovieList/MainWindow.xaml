@@ -14,7 +14,6 @@
             
            
         </Style>
-        
     
     </Window.Resources>
     
@@ -30,7 +29,8 @@
                         <GridViewColumn Width="150" Header="Director" DisplayMemberBinding="{Binding Director}"></GridViewColumn>
                         <GridViewColumn Width="150" Header="Length" DisplayMemberBinding="{Binding Length}"></GridViewColumn>
                         <GridViewColumn Width="150" Header="Genre" DisplayMemberBinding="{Binding Genre}"></GridViewColumn>
-                    
+                        <GridViewColumn Width="150" Header="Rotten" DisplayMemberBinding="{Binding Rotten}"></GridViewColumn>
+
                     </GridView>
                   
                 </ListView.View>
@@ -39,8 +39,8 @@
             <TextBlock Background="Orange" Foreground="Magenta">Title</TextBlock>
             <TextBox  Name="TitleInput" Margin="0,0,0,15" Background="Orange" Foreground="Magenta"></TextBox>
             <TextBlock Background="Orange" Foreground="Magenta">Release Year</TextBlock>
-            <TextBox Name="ReleaseYearInput" Margin="0,0,0,15" Background="Orange" Foreground="Magenta"></TextBox>
-
+            
+            <DatePicker Name="Date"></DatePicker>
 
             <TextBlock  Background="Orange" Foreground="Magenta">Director</TextBlock>
             <TextBox Name="directorInput" Margin="0,0,0,15"  Background="Orange" Foreground="Magenta"></TextBox>
@@ -48,13 +48,21 @@
             <TextBox Name="lengthInput" Margin="0,0,0,15"  Background="Orange" Foreground="Magenta">
             </TextBox >
             <TextBlock  Background="Orange" Foreground="Magenta">Genre</TextBlock>
+           
             <ComboBox Name="genreInput" Margin="0,0,0,15">
+
+
                 <ComboBoxItem Content="Comedy"/>
                 <ComboBoxItem Content="romance"/>
                 <ComboBoxItem Content="action"/>
             </ComboBox>
 
 
+                <TextBlock Background="Aquamarine" Foreground="AliceBlue">Rotten Tomatoes Score</TextBlock>
+
+                <TextBox Name="rottenInput" Margin="0,0,0,15" Background="Beige" Foreground="RoyalBlue">
+
+                </TextBox> 
 
             <Button Margin="0,0,0,10" HorizontalAlignment="Center" Click="AddButton_Click" Background="Orange" Foreground="Magenta">Add</Button>
             <Button HorizontalAlignment="Center" Click="Show_Button_Click" Background="Orange" Foreground="Magenta">Show All Movies</Button>
