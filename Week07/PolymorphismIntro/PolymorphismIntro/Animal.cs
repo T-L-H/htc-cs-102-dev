@@ -10,11 +10,20 @@ namespace PolymorphismIntro
     public class Animal
     {
         public int Height;
-        public string Name;
+        public string Name
+        {
+            get;
+            set;
+            
+        }
 
         public void SayName()
         {
             MessageBox.Show("My name is " + Name);
+        }
+        public virtual void Speak()
+        {
+            MessageBox.Show("This should never show up!");
         }
     }
 }
