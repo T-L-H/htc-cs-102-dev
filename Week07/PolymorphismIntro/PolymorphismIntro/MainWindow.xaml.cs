@@ -27,11 +27,11 @@ namespace PolymorphismIntro
             InitializeComponent();
             Animals = new ObservableCollection<Animal>();
             // Instantiate some dog objects
-            Dog dog1 = new Dog("Muppet", 20, "Rolf");
-            Dog dog2 = new Dog("Golden Retriever", 30, "Air Bud");
-            Duck duck1 = new Duck(9, "Donald");
+            Dog dog1 = new Dog("Muppet", 20, "Rolf", 55);
+            Dog dog2 = new Dog("Golden Retriever", 30, "Air Bud", 999999);
+            Duck duck1 = new Duck(9, "Donald", 70000);
 
-            Frog frog1 = new Frog(4, "Kermit", false);
+            Frog frog1 = new Frog(4, "Kermit", false, 3);
 
             // Add the dogs to the list
             Animals.Add(dog1);

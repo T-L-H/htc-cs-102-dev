@@ -9,7 +9,17 @@ namespace PolymorphismIntro
 {
     public class Animal
     {
-        public int Height;
+
+        public int Weight
+        {
+            get;
+            set;
+        }
+        public int Height
+        {
+            get;
+            set;
+        }
         public string Name
         {
             get;
