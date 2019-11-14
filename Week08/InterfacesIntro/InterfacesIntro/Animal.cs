@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InterfacesIntro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Windows;
 
 namespace InheritanceIntro
 {
-    public class Animal
+    public class Animal : ISpeaker
     {
         public int Height
         {
@@ -21,10 +22,18 @@ namespace InheritanceIntro
             set;
         }
 
+        public int Weight
+        {
+            get;
+            set;
+        }
+
         public void SayName()
         {
             MessageBox.Show("My name is " + Name);
         }
+
+      
 
         public virtual void Speak()
         {
