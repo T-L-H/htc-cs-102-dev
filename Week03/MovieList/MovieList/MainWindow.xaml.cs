@@ -54,19 +54,33 @@ namespace MovieList
                 MessageBox.Show("You did not add a title.");
                 return;
             }
-            if (String.IsNullOrEmpty(ReleaseYearInput.Text))
+            DateTime Nowdate = DateTime.Now;
+
+            if (Date.SelectedDate != null)
+
             {
-                MessageBox.Show("You did not add a release year.");
-                return;
+
+                Nowdate = Date.SelectedDate.Value;
+                
             }
             string title = TitleInput.Text;
             string director = directorInput.Text;
-            int releaseYear = Convert.ToInt32(ReleaseYearInput.Text);
+            string releaseDate = Date.SelectedDate.Value.ToShortDateString();
             int length = Convert.ToInt32(lengthInput.Text);
             string genre = genreInput.Text;
 
+            int rotten = 0;
 
-            Movie movie = new Movie(title, releaseYear, director, length, genre);
+            if (rottenInput.Text.Length > 0)
+
+            {
+
+                rotten = Convert.ToInt32(rottenInput.Text);
+
+            }
+
+
+            Movie movie = new Movie(title, releaseDate, director, length, genre, rotten);
             Movies.Add(movie);
             MessageBox.Show("Movie was added");
            
