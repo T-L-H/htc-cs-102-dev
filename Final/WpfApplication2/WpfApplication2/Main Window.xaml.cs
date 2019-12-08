@@ -10,24 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApplication2
 {
     /// <summary>
-    /// Interaction logic for Level2.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Level2 : Window
+    public partial class MainWindow : Window
     {
-        public Level2()
+       
+
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
-        }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
-       System.Diagnostics.Process.Start("https://drive.google.com/file/d/1DorRQg8gExHJ7PCjdQFBaJ9oXTMrH6A3/view?usp=sharing");
-            
+            System.Diagnostics.Process.Start("https://drive.google.com/file/d/1DorRQg8gExHJ7PCjdQFBaJ9oXTMrH6A3/view?usp=sharing");
+            Level2 level2 = new Level2();
+            level2.Show();
+            this.Hide();
         }
 
         private void button_Click2(object sender, RoutedEventArgs e)

@@ -14,25 +14,22 @@ using System.Windows.Shapes;
 
 namespace WpfApplication2
 {
-    /// <summary>
-    /// Interaction logic for Level2.xaml
-    /// </summary>
-    public partial class Level2 : Window
-    {
-        public Level2()
-        {
-            InitializeComponent();
-        }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
-       System.Diagnostics.Process.Start("https://drive.google.com/file/d/1DorRQg8gExHJ7PCjdQFBaJ9oXTMrH6A3/view?usp=sharing");
-            
-        }
 
-        private void button_Click2(object sender, RoutedEventArgs e)
+  
+    /// <summary>
+    /// Interaction logic for Window1.xaml
+    /// </summary>
+    public partial class Window1 : Window
+    {
+
+        private void ClickBait(object sender, RoutedEventArgs e)
         {
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Hide();
             System.Diagnostics.Process.Start("https://drive.google.com/file/d/1KWNxEWAVfKHUJwGV8BrRPGJVI7KDfPOY/view?usp=sharing");
         }
     }
 }
+
