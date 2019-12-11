@@ -23,12 +23,12 @@ namespace WpfApplication2
         public MainWindow()
         {
             InitializeComponent();
-            
+           
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://drive.google.com/file/d/1DorRQg8gExHJ7PCjdQFBaJ9oXTMrH6A3/view?usp=sharing");
+            System.Diagnostics.Process.Start("https://drive.google.com/file/d/1QM91ws1ZOvFBcPzm4hYG4NWBvjNKu_EC/view?usp=sharing");
             Level2 level2 = new Level2();
             level2.Show();
             this.Hide();
@@ -37,6 +37,7 @@ namespace WpfApplication2
         private void button_Click2(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://drive.google.com/file/d/1KWNxEWAVfKHUJwGV8BrRPGJVI7KDfPOY/view?usp=sharing");
+            this.Hide();
         }
     }
 }

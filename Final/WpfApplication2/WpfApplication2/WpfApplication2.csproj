@@ -55,13 +55,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Final.xaml.cs">
+      <DependentUpon>Final.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Level3.xaml.cs">
       <DependentUpon>Level3.xaml</DependentUpon>
     </Compile>
     <Compile Include="screen1.xaml.cs">
       <DependentUpon>screen1.xaml</DependentUpon>
     </Compile>
+    <Page Include="Final.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Level2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Level3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -80,10 +91,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Level3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="screen1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -14,22 +14,21 @@ using System.Windows.Shapes;
 
 namespace WpfApplication2
 {
-
-  
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for Final.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Final : Window
     {
+        public Final()
+        {
+            InitializeComponent();
+        }
+        private void button1_Click(object sender, RoutedEventArgs e)
 
-        private void ClickBait(object sender, RoutedEventArgs e)
         {
 
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-            this.Hide();
-            System.Diagnostics.Process.Start("https://drive.google.com/file/d/1DGWA-XFWYql60-860nlkqhJZGRxotPTx/view?usp=sharing");
+            listBox1.Items.Add(textBox1.Text);
+
         }
     }
 }
-

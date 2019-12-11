@@ -22,17 +22,23 @@ namespace WpfApplication2
         public Level2()
         {
             InitializeComponent();
+           
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
-       System.Diagnostics.Process.Start("https://drive.google.com/file/d/1DorRQg8gExHJ7PCjdQFBaJ9oXTMrH6A3/view?usp=sharing");
+            Level3 level3 = new Level3();
+            level3.Show();
+            this.Hide();
+
+            System.Diagnostics.Process.Start("https://drive.google.com/file/d/1FnjslBb8puW8WNCDLE3UITpAfBB5JaSZ/view?usp=sharing");
             
         }
 
         private void button_Click2(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://drive.google.com/file/d/1KWNxEWAVfKHUJwGV8BrRPGJVI7KDfPOY/view?usp=sharing");
+            this.Hide();
         }
     }
 }
